@@ -91,7 +91,7 @@ const ConversationPage = () => {
         )}
 
         {messages.map((message) => (
-          <div className={cn("flex w-full p-4 mt-4 rounded-lg h-auto items-center justify-start", message.role === "user" ? "bg-violet-600/10" : "bg-orange-500/10")}>
+          <div className={cn("flex w-full p-4 mt-4 rounded-lg h-auto items-center justify-start", message.role === "user" ? "bg-violet-600/10" : "bg-orange-500/10")} key={message.content}>
             <Avatar className="md:w-12 md:h-12 w-8 h-8">
               <AvatarImage src={message.role === "user" ? "/user.avif" : "/icon.png.png"} className="w-full h-full rounded-full"></AvatarImage>
             </Avatar>

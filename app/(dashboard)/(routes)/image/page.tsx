@@ -199,7 +199,7 @@ const ImagePage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 w-full">
           {images.map((image) => (
-            <Card className="rounded-lg overflow-hidden bg-black/10 hover:shadow-md transition-all">
+            <Card className="rounded-lg overflow-hidden bg-black/10 hover:shadow-md transition-all" key={image}>
               <div className="relative aspect-square">
                 <Image src={image} fill alt="generated" />
               </div>

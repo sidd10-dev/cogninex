@@ -53,7 +53,7 @@ const DashBoardPage = () => {
       </div>
       <div className="mt-5 h-full md:w-1/2 w-3/4 flex-col items-center">
         {cards.map((card) => (
-          <Link href={card.href}>
+          <Link href={card.href} key={card.label}>
             <Card className={cn("p-4 mt-3 flex items-center hover:shadow transition-all justify-between", card.bgColor)}>
               <div className="flex">
                 <card.icon className={card.color} />

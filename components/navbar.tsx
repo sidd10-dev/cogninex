@@ -64,7 +64,7 @@ const Navbar = () => {
         </div>
         <div className="flex w-96 h-full items-center justify-evenly">
           {routes.map((route) => (
-            <Link href={route.href} title={route.label}>
+            <Link href={route.href} title={route.label} key={route.label}>
               <div className={cn("p-2 hover:bg-white/10 rounded-lg", route.color,
                 pathname === route.href ? "bg-white/10" : "bg-none")}>
                 <route.icon />
